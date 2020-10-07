@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Julie's Hanzi Tones</title>
+    <meta name="Display tones alongside Hanzi" content="">
+    <meta name="author" content="pragdave">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">  
+
+<style>
+  header {
+    height: 8rem;
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    margin: 0;
+    position: absolute;
+  }
+  h1 img {
+    max-height: 6rem;
+    padding-top: 2rem;
+    position: relative;
+    top: 1rem;
+  }
+  textarea {
+    height: 25vh;
+  }
+
+  #result {
+    white-space: pre-wrap;
+    overflow: scroll;
+  }
+
+  .mark {
+    display: inline-block;
+    margin-right: 0.45rem;
+  }
+
+  #result.color-marks .mark.tone-1 { color: red }
+  #result.color-marks .mark.tone-2 { color: orange }
+  #result.color-marks .mark.tone-3 { color: green }
+  #result.color-marks .mark.tone-4 { color: blue }
+  #result.color-marks .mark.tone-5 { color: #666 }
+
+  #result.color-chars .char.tone-1 { color: #a33 }
+  #result.color-chars .char.tone-2 { color: #3cc }
+  #result.color-chars .char.tone-3 { color: #3a3 }
+  #result.color-chars .char.tone-4 { color: #33a }
+  #result.color-chars .char.tone-5 { color: #666 }
+
+</style>
+  </head>
+  <body>
+
+    <script src="./leaders.js"></script>
+    <div class="container">
+      <header>
+      <h1>声猴<img src="images/tonemonkey.jpg"/></h1>
+      </header>
+      <div class="row">
+        <div class="one-third column">
+          <form id="input">
+            <label for="original">Original text</label>
+            <textarea class="u-full-width" rows="10" placeholder="Paste or type your text" id="original"></textarea>
+            <input class="button-primary" type="submit" value="Submit">
+            <label>
+              <input id="colorize-tones" type="checkbox" checked>
+              <span class="label-body">colorize tones</span>
+            </label>
+            <label>
+              <input id="colorize-chars" type="checkbox">
+              <span class="label-body">colorize characters</span>
+            </label>
+          </form>
+        </div>
+
+        <div class="two-thirds column">
+          <label for="result">Result</label>
+          <div id="result" class="color-marks">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>
